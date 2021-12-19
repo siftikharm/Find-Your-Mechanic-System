@@ -100,7 +100,7 @@ public class WorkshopServiceImp implements WorkShopService {
 		Workshop workshop=new Workshop();
 		for (int i = 0; i < workshops.size(); i++) {
 			if (workshops.get(i).getUsername().equals(workshopID)) {
-				workshop=workshops.get(i);	
+				workshop=workshops.get(i);  	
 			}
 		}
 		workshopDAO.deleteServices(service,workshop.getWorkShopID());

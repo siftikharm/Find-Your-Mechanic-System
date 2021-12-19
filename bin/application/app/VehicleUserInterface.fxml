@@ -77,7 +77,7 @@
                               </Label>
                               <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="539.0" layoutY="1.0" nodeOrientation="INHERIT" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Find%20your%20mechanic.jpg" />
+                                    <Image url="@Find%20your%20mechanic.jpg" />
                                  </image>
                                  <effect>
                                     <ColorAdjust contrast="1.0" hue="0.17" />
@@ -115,7 +115,7 @@
                               </Label>
                               <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="539.0" layoutY="1.0" nodeOrientation="INHERIT" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Find%20your%20mechanic.jpg" />
+                                    <Image url="@Find%20your%20mechanic.jpg" />
                                  </image>
                                  <effect>
                                     <ColorAdjust contrast="1.0" hue="0.17" />
@@ -157,7 +157,7 @@
                            <children>
                               <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="539.0" layoutY="1.0" nodeOrientation="INHERIT" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Find%20your%20mechanic.jpg" />
+                                    <Image url="@Find%20your%20mechanic.jpg" />
                                  </image>
                                  <effect>
                                     <ColorAdjust contrast="1.0" hue="0.17" />
@@ -335,7 +335,7 @@
                                                                   </Label>
                                                                   <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="540.0" layoutY="-2.0" nodeOrientation="INHERIT" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@../Find%20your%20mechanic.jpg" />
+                                                                        <Image url="@Find%20your%20mechanic.jpg" />
                                                                      </image>
                                                                      <effect>
                                                                         <ColorAdjust contrast="1.0" hue="0.17" />
@@ -373,7 +373,7 @@
                                                                   </Label>
                                                                   <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="540.0" layoutY="-2.0" nodeOrientation="INHERIT" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@../Find%20your%20mechanic.jpg" />
+                                                                        <Image url="@Find%20your%20mechanic.jpg" />
                                                                      </image>
                                                                      <effect>
                                                                         <ColorAdjust contrast="1.0" hue="0.17" />
@@ -430,17 +430,12 @@
                                     <ColorAdjust contrast="1.0" hue="0.17" />
                                  </effect>
                                  <image>
-                                    <Image url="@../Find%20your%20mechanic.jpg" />
+                                    <Image url="@Find%20your%20mechanic.jpg" />
                                  </image>
                               </ImageView>
                               <Label layoutX="188.0" layoutY="105.0" text="Ratings:" textFill="WHITE" />
                               <Label layoutX="170.0" layoutY="196.0" text="Comments:" textFill="WHITE" />
-                              <TextField fx:id="feedBackRatings" layoutX="259.0" layoutY="101.0" />
-                              <Label layoutX="230.0" layoutY="62.0" text="Register a new Vehicle" textFill="WHITE">
-                                 <font>
-                                    <Font name="Berlin Sans FB Demi Bold" size="14.0" />
-                                 </font>
-                              </Label>
+                              <TextField fx:id="feedBackRatings" layoutX="259.0" layoutY="101.0" promptText="Out of 5" />
                               <Button layoutX="287.0" layoutY="303.0" mnemonicParsing="false" onAction="#feedback" text="Submit" />
                               <TextArea fx:id="feedbackComents" layoutX="259.0" layoutY="196.0" prefHeight="97.0" prefWidth="281.0" />
                               <TextField fx:id="feedBackwork" layoutX="259.0" layoutY="148.0" />

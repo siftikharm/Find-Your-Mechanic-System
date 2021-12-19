@@ -1,5 +1,8 @@
 package testing;
 import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertThrows;
+//import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,6 +29,7 @@ import application.entity.Workshop;
 import application.service.WorkShopService;
 import application.service.WorkshopServiceImp;
 import exceptionHandling.IncorrectFeedback;
+import exceptionHandling.InvalidLoginCredentials;
 import javafx.collections.ObservableList;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -54,6 +58,19 @@ public class TestWorkshopService {
 	@Order(1)
 	public void testRegisterWorkshop() {
 		assertEquals(true , workshopService.registerWorkshop(workshop, null));  
+	}
+	@Test
+	@Order(1)
+	public void testRegisterWorkshop1() {
+		assertEquals(false , workshopService.registerWorkshop(workshop, null));  
+	}
+	
+	@Test
+	void LoginTesting() {
+	    Throwable exception = assertThrows(InvalidLoginCredentials.class, () -> {
+	        workshopService.workshopLogin("qwerty", "ytrew");
+	    });
+	    assertEquals("User name or password incorrect", exception.getMessage());
 	}
 	
 	
@@ -131,7 +148,15 @@ public class TestWorkshopService {
 		session.close();
 		
 	}
-	
+	@Test
+	@Order(6)
+	void FeedbackTesting() {
+		feedback.setRating(6);
+	    Throwable exception = assertThrows(IncorrectFeedback.class, () -> {
+	        workshopService.provideWorkshopFeedback(workshop.getUsername(), feedback);
+	    });
+	    assertEquals("Rating 1 - 5", exception.getMessage());
+	}
 	
 	@AfterAll
 	public static void tearDown()throws Exception {

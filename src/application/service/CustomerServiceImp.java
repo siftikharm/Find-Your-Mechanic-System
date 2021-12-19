@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 import application.entity.Customer;
 import application.entity.Vehicle;
+import exceptionHandling.InvalidLoginCredentials;
 import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
 import application.doa.CustomerDOA;
@@ -93,14 +94,14 @@ public class CustomerServiceImp implements CustomerService {
 	}
 
 	@Override
-	public Customer customerLogin(String customerID, String password) {
+	public Customer customerLogin(String customerID, String password) throws InvalidLoginCredentials {
 		ArrayList<Customer> customers= customerDAO.getCustomers();
 		for (int i = 0; i < customers.size(); i++) {
 			if(customers.get(i).getUsername().equals(customerID)&& customers.get(i).getPassword().equals(password)) {
 				return customers.get(i);
 			}
 		}
-		return null;
+		throw new InvalidLoginCredentials("User name or password incorrect");
 		
 	}
 

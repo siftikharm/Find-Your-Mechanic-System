@@ -1,6 +1,7 @@
 package testing;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,6 +21,7 @@ import application.entity.Vehicle;
 import application.entity.Workshop;
 import application.service.CustomerService;
 import application.service.CustomerServiceImp;
+import exceptionHandling.InvalidLoginCredentials;
 import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
 
@@ -53,7 +55,13 @@ public class TestCustomerService {
 
 		}
 	}
-
+	@Test
+	void LoginTesting() {
+	    Throwable exception = assertThrows(InvalidLoginCredentials.class, () -> {
+	        customerService.customerLogin("qwerty", "rtyrty");
+	    });
+	    assertEquals("User name or password incorrect", exception.getMessage());
+	}
 //	@Test
 //	@Order(2)
 //	public void testRegisterCustomerNegative() throws UserAlreadyExists {

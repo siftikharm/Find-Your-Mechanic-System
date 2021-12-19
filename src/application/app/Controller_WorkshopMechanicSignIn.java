@@ -4,6 +4,8 @@ import application.entity.Customer;
 import application.entity.Workshop;
 import application.service.WorkShopService;
 import application.service.WorkshopServiceImp;
+import exceptionHandling.InvalidLoginCredentials;
+import exceptionHandling.UserAlreadyExists;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,8 +43,14 @@ public class Controller_WorkshopMechanicSignIn
 		
 		String username = Username.getText();
 		String password = Password.getText();
-		Workshop workshop=service.workshopLogin(username, password);
-		if(workshop!=null)
+		Workshop workshop=null;
+		try {
+			workshop=service.workshopLogin(username, password);
+		} catch (InvalidLoginCredentials e) {
+			// TODO: handle exception
+		}
+	
+		if(workshop!=null) 
 		{
 		
 			ObjSingleton sin=ObjSingleton.getInstance();
