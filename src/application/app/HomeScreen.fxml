@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.Controller_HomeScreen">
+   <center>
+      <AnchorPane opacity="0.7" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="112.0" layoutX="256.0" layoutY="14.0" nodeOrientation="INHERIT" preserveRatio="true">
+               <image>
+                  <Image url="@../Find%20your%20mechanic.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="1.0" hue="0.17" />
+               </effect>
+               <rotationAxis>
+                  <Point3D x="5.0" z="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="66.0" style="-fx-alignment: centre;" text="Find your Mechanic" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <Button fx:id="Exit" layoutX="551.0" layoutY="367.0" mnemonicParsing="false" onAction="#Exit_Function" text="Exit" />
+            <Button fx:id="VehicleUser_SignIn" layoutX="177.0" layoutY="225.0" mnemonicParsing="false" onAction="#VehicleUser_SignIn_Function" text="Sign-In" />
+            <Button fx:id="WorkshopMechanic_SignIn" layoutX="504.0" layoutY="225.0" mnemonicParsing="false" onAction="#MechanicWorkshop_SignIn_Function" text="Sign-In" />
+            <Button fx:id="VehicleUser_SignUp" layoutX="175.0" layoutY="271.0" mnemonicParsing="false" onAction="#VehicleUser_SignUp_Function" text="Sign-Up" />
+            <Button fx:id="WorkshopMechanic_SignUp" layoutX="502.0" layoutY="271.0" mnemonicParsing="false" onAction="#MechanicWorkshop_SignUp_Function" text="Sign-Up" />
+            <Label layoutX="60.0" layoutY="189.0" text="Vehicle User Interface" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="344.0" layoutY="189.0" text="Workshop Mechanic Interface" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="229.0" text="Already have an account ?" textFill="WHITE" />
+            <Label layoutX="40.0" layoutY="275.0" text="Create a new account" textFill="WHITE" />
+            <Label layoutX="344.0" layoutY="229.0" text="Already have an account ?" textFill="WHITE" />
+            <Label layoutX="357.0" layoutY="275.0" text="Create a new account" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </center>
+</BorderPane>

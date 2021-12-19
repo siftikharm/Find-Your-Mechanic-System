@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="112.0" layoutX="259.0" layoutY="-7.0" nodeOrientation="INHERIT" preserveRatio="true">
+               <image>
+                  <Image url="@../Find%20your%20mechanic.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="1.0" hue="0.17" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="47.0" style="-fx-alignment: centre;" text="Find your Mechanic" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="15.0" layoutY="127.0" text="Desktop JAVA FX application &quot;Find Your Mechanic&quot; will provide eligible and FYM certified vehicle mechanics" textFill="WHITE" />
+            <Label layoutX="17.0" layoutY="213.0" text="We aim to create a product for the vehicle owners to find a vehicle mechanic through a hassle free process" textFill="WHITE" />
+            <Label layoutX="13.0" layoutY="144.0" text="The FYM application helps the user to search for vehicle mechanics based on the complication of the vehicle" textFill="WHITE" />
+            <Label layoutX="221.0" layoutY="102.0" text="Application Description" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="161.0" text="FYM search module will provide the most &quot;vehicle complication&quot; related vehilce mechanics. Search module" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="178.0" text="assigns nearby &quot;quality-rated&quot; vehicle mechanic respective to the location provided by the user. The vehicle" textFill="WHITE" />
+            <Label layoutX="9.0" layoutY="196.0" text="owner can select any vehicle mechanic from the search module according to their preference and convinience" textFill="WHITE" />
+            <Label layoutX="241.0" layoutY="240.0" text="Target Audience" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="264.0" text="&gt; Vehicle Owners" textFill="WHITE" />
+            <Label layoutX="243.0" layoutY="281.0" text="&gt; Vehicle Mechanics" textFill="WHITE" />
+            <Label layoutX="236.0" layoutY="309.0" text="Development Team" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="334.0" text="Syed Iftikhar Mehdi - i190657" textFill="WHITE" />
+            <Label layoutX="214.0" layoutY="351.0" text="Rizwan Habib Janjua - i190503" textFill="WHITE" />
+            <Label layoutX="211.0" layoutY="366.0" text="Ahmed Ibrahim Khan - k190312" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.Controller_WorkshopMechanicSignUp">
+   <center>
+      <AnchorPane opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="112.0" layoutX="259.0" layoutY="-8.0" nodeOrientation="INHERIT" preserveRatio="true">
+               <image>
+                  <Image url="@../Find%20your%20mechanic.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="1.0" hue="0.17" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="38.0" style="-fx-alignment: centre;" text="Find your Mechanic" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="189.0" layoutY="89.0" text="Workshop Registeration Interface" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="Back" layoutX="545.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+            <Label layoutX="24.0" layoutY="135.0" text="Workshop Name" textFill="WHITE" />
+            <TextField fx:id="WorkshopName" layoutX="121.0" layoutY="132.0" promptText="Enter your full name" />
+            <Button fx:id="SignUp" layoutX="412.0" layoutY="315.0" mnemonicParsing="false" onAction="#SignUp" text="Register" />
+            <Label layoutX="93.0" layoutY="168.0" text="Workshop Address" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="WorkshopNumber" layoutX="121.0" layoutY="199.0" promptText="Shop number" />
+            <Label layoutX="31.0" layoutY="202.0" text="Shop Number" textFill="WHITE" />
+            <Label layoutX="30.0" layoutY="235.0" text="Street Number" textFill="WHITE" />
+            <TextField fx:id="StreetNumber" layoutX="121.0" layoutY="231.0" promptText="Street number" />
+            <TextField fx:id="DistrictArea" layoutX="121.0" layoutY="263.0" promptText="District Area name" />
+            <Label layoutX="36.0" layoutY="267.0" text="District Area" textFill="WHITE" />
+            <TextField fx:id="City" layoutX="121.0" layoutY="295.0" prefHeight="25.0" prefWidth="149.0" promptText="Province/City name" />
+            <Label layoutX="34.0" layoutY="299.0" text="Province/City" textFill="WHITE" />
+            <TextField fx:id="Country" layoutX="121.0" layoutY="327.0" prefHeight="25.0" prefWidth="149.0" promptText="Country name" />
+            <Label layoutX="27.0" layoutY="327.0" text="Country/Region" textFill="WHITE" />
+            <Label layoutX="380.0" layoutY="143.0" text="Workshop Services" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="BasicTuning" layoutX="307.0" layoutY="170.0" mnemonicParsing="false" text="Basic Tuning" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="PowerTuning" layoutX="396.0" layoutY="170.0" mnemonicParsing="false" text="Power Tuning" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="VehicleInspection" layoutX="487.0" layoutY="170.0" mnemonicParsing="false" text="Vehicle Inspection" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="BrakeService" layoutX="307.0" layoutY="193.0" mnemonicParsing="false" text="Brake Service" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="HeadRepair" layoutX="396.0" layoutY="193.0" mnemonicParsing="false" text="Head Repair" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="EngineRepair" layoutX="488.0" layoutY="193.0" mnemonicParsing="false" text="Engine Repair" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="TankCleaning" layoutX="307.0" layoutY="239.0" mnemonicParsing="false" text="Tank Cleaning" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="FuelPumpRepair" layoutX="490.0" layoutY="263.0" mnemonicParsing="false" text="Fuel Pump Repair" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ClutchRepair" layoutX="307.0" layoutY="217.0" mnemonicParsing="false" text="Clutch Repair" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="PressurePlate" layoutX="395.0" layoutY="217.0" mnemonicParsing="false" text="Pressure Plate" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="GasKitRepair" layoutX="395.0" layoutY="240.0" mnemonicParsing="false" text="Gas-Kit Repair" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ACService" layoutX="307.0" layoutY="286.0" mnemonicParsing="false" text="Air-Conditioning Service" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="RadiatorService" layoutX="489.0" layoutY="240.0" mnemonicParsing="false" text="Radiator Service" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="WheelAllignment" layoutX="489.0" layoutY="217.0" mnemonicParsing="false" text="Wheel Allignment" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ElectricService" layoutX="307.0" layoutY="263.0" mnemonicParsing="false" text="Electric Service" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="FilterService" layoutX="395.0" layoutY="263.0" mnemonicParsing="false" text="Oil/Air Filters" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="SuspentionService" layoutX="454.0" layoutY="286.0" mnemonicParsing="false" text="Wheel Suspention Service" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
