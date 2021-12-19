@@ -20,6 +20,12 @@ public class Feedback {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Feedback(String comments, int rating) {
+		super();
+		this.comments = comments;
+		this.rating = rating;
+	}
+
 	public Workshop getWorkshop() {
 		return workshop;
 	}

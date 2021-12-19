@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -12,13 +19,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.Controller_VehicleUserSignUp">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.Controller_VehicleUserSignUp">
    <center>
       <AnchorPane opacity="0.7" prefHeight="357.0" prefWidth="567.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="82.0" fitWidth="112.0" layoutX="259.0" layoutY="-8.0" nodeOrientation="INHERIT" preserveRatio="true">
                <image>
-                  <Image url="@../Find%20your%20mechanic.jpg" />
+                  <Image url="@Find%20your%20mechanic.jpg" />
                </image>
                <effect>
                   <ColorAdjust contrast="1.0" hue="0.17" />
@@ -55,8 +62,8 @@
             <Label layoutX="300.0" layoutY="211.0" text="Enter your Password" textFill="WHITE" />
             <Label layoutX="287.0" layoutY="251.0" text="Re-type your Password" textFill="WHITE" />
             <TextField fx:id="Gender" layoutX="121.0" layoutY="297.0" promptText="Male, Female or Other" />
-            <PasswordField fx:id="Password" layoutX="415.0" layoutY="207.0" promptText="*********************************" />
-            <PasswordField fx:id="RetypedPassword" layoutX="415.0" layoutY="247.0" promptText="*********************************" />
+            <PasswordField fx:id="Password" layoutX="415.0" layoutY="207.0" promptText="***********" />
+            <PasswordField fx:id="RetypedPassword" layoutX="415.0" layoutY="247.0" promptText="***********" />
          </children>
       </AnchorPane>
    </center>

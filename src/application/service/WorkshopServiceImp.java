@@ -12,6 +12,8 @@ import application.entity.Customer;
 import application.entity.Feedback;
 import application.entity.ServicesOffered;
 import application.entity.Workshop;
+import exceptionHandling.IncorrectFeedback;
+import exceptionHandling.InvalidLoginCredentials;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -51,27 +53,35 @@ public class WorkshopServiceImp implements WorkShopService {
 		}
 		
 		workshopDAO.registerWorkshop(workshop);
-		for (int i = 0; i < services.size(); i++) {
-			ServicesOffered service=new ServicesOffered();
-			service.setName(services.get(i));
-			service.setCharges(0);
-			service.setDescription("");
-			service.setWorkshop(workshop);
-			service.setServiceID(workshop.getWorkShopID());
-			addServices(service,workshop.getUsername());
+		if(services != null) {
+			for (int i = 0; i < services.size(); i++) {
+				ServicesOffered service=new ServicesOffered();
+				service.setName(services.get(i));
+				service.setCharges(0);
+				service.setDescription("");
+				service.setWorkshop(workshop);
+				service.setServiceID(workshop.getWorkShopID());
+				addServices(service,workshop.getUsername());
+			}
 		}
 		
 		return true;
 	}
 
 	@Override
-	public Workshop workshopLogin(String username, String password) {
+	public Workshop workshopLogin(String username, String password) throws InvalidLoginCredentials {
 		// TODO Auto-generated method stub
+		boolean found = false;
 		ArrayList<Workshop> workshops= workshopDAO.getWorkshops();
 		for (int i = 0; i < workshops.size(); i++) {
 			if(workshops.get(i).getUsername().equals(username)&& workshops.get(i).getPassword().equals(password)) {
+				found = true;
 				return workshops.get(i);
 			}
+		}
+		
+		if(!found) {
+			throw new InvalidLoginCredentials("User name or password incorrect");
 		}
 		return null;
 	}
@@ -133,10 +143,10 @@ public class WorkshopServiceImp implements WorkShopService {
 	}
 
 	@Override
-	public void provideWorkshopFeedback(String workShopID, Feedback feedback) {
+	public void provideWorkshopFeedback(String workShopID, Feedback feedback) throws IncorrectFeedback {
 		// TODO Auto-generated method stub
 		if(feedback.getRating()>5 || feedback.getRating()<0) {
-			return;
+			throw new IncorrectFeedback("Rating 1 - 5");
 		}
 		ArrayList<Workshop> workshops= workshopDAO.getWorkshops();
 		Workshop workshop=new Workshop();

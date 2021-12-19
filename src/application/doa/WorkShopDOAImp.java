@@ -15,20 +15,24 @@ import application.entity.Feedback;
 import application.entity.ServicesOffered;
 import application.entity.Vehicle;
 import application.entity.Workshop;
+import exceptionHandling.DatabaseNotFoundException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class WorkShopDOAImp implements WorkshopDOA {
+	
 	private SessionFactory sf;
-	public WorkShopDOAImp() {
-		// TODO Auto-generated constructor stub
+	
+	public WorkShopDOAImp(){
+		
 		Configuration con = new Configuration();
     	con.configure().addAnnotatedClass(Customer.class);
     	con.configure().addAnnotatedClass(Vehicle.class);
     	con.configure().addAnnotatedClass(Workshop.class);
      	con.configure().addAnnotatedClass(Feedback.class);
      	con.configure().addAnnotatedClass(ServicesOffered.class);
-    	sf = con.buildSessionFactory();	
+    	sf = con.buildSessionFactory();
+		
 	}
 	@Override
 	public void addServices(ServicesOffered service) {

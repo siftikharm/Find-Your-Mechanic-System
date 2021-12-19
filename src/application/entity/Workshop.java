@@ -28,10 +28,26 @@ public class Workshop {
 	private Set<ServicesOffered> workshopServices;
 	@OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER,mappedBy = "workshop")
 	private Set<Feedback> feedbacks;
+	
 	public Workshop() {
 		workshopServices = new HashSet<ServicesOffered>();
 		feedbacks = new HashSet<Feedback>();
 	}
+	
+
+	public Workshop(String workshopName, String workshopAddress, String contactNumber, String username, String password,
+			double ratings, Set<ServicesOffered> workshopServices, Set<Feedback> feedbacks) {
+		this.workshopName = workshopName;
+		this.workshopAddress = workshopAddress;
+		this.contactNumber = contactNumber;
+		this.username = username;
+		this.password = password;
+		this.ratings = ratings;
+		this.workshopServices = workshopServices;
+		this.feedbacks = feedbacks;
+	}
+
+
 	public int getWorkShopID() {
 		return workShopID;
 	}

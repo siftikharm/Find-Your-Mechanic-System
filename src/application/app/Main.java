@@ -1,43 +1,28 @@
 package application.app;
-	
+
 import java.io.IOException;
-import java.util.ArrayList;
 
-
-import application.entity.Customer;
-import application.entity.Feedback;
-import application.entity.ServicesOffered;
-import application.entity.Vehicle;
-import application.entity.Workshop;
-import application.service.CustomerService;
-import application.service.CustomerServiceImp;
-import application.service.WorkShopService;
-import application.service.WorkshopServiceImp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-
-public class Main extends Application 
-{
+public class Main extends Application {
 	@Override
-	public void start(Stage primaryStage) throws IOException 
-	{
-		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
+	public void start(Stage primaryStage) throws IOException {
+		BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
 		Scene scene = new Scene(root, 600, 400);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.resizableProperty().setValue(Boolean.FALSE);
 		primaryStage.setScene(scene);
-		primaryStage.show();		
+		primaryStage.show();
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
 }
-
 
 //public class Main /*extends Application*/ {
 //	@Override
@@ -100,7 +85,7 @@ public class Main extends Application
 //			System.out.println(ser.get(i).getName());
 //			
 //		}
-		//		launch(args);
+// launch(args);
 //		CustomerService service = new CustomerServiceImp();
 //		Customer c = new Customer();
 //		c.setfName("Hunaid");
@@ -110,8 +95,7 @@ public class Main extends Application
 //		c.setPassword("1234");
 //		c.setUsername("hunaid");
 //		c.setVehicles();
-		
-		
+
 //		Vehicle vehcile = new Vehicle("Prius" , "2020" , "Changan");
 //		vehcile.setPlateNumber("ISB-2021");
 //		c.saveVechicle(vehcile);

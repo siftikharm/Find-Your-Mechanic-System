@@ -81,7 +81,7 @@ public class CustomerDOAImp implements CustomerDOA {
 
 	@Override
 	public ArrayList<Customer> getCustomers() {
-		Session session = sf.openSession();
+		Session session =  sf.openSession(); 
 		Transaction trans = session.beginTransaction();
 		List customers=session.createQuery("from Customer").list();
 		ArrayList<Customer> customer=new ArrayList<>();

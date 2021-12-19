@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 import application.entity.Customer;
 import application.entity.Vehicle;
+import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
 import application.doa.CustomerDOA;
 import application.doa.CustomerDOAImp;
@@ -24,15 +25,22 @@ public class CustomerServiceImp implements CustomerService {
 //	}
 	
 	@Override
-	public boolean registerCustomer(Customer customer) {
+	public boolean registerCustomer(Customer customer) throws UserAlreadyExists {
+		boolean flag = true;
 		ArrayList<Customer> customers= customerDAO.getCustomers();
 		for (int i = 0; i < customers.size(); i++) {
 			if (customers.get(i).getUsername().equals(customer.getUsername())) {
-				return false; 
+				flag = false; 
 			}
 		}
-		customerDAO.registerCustomer(customer);
-		return true;
+		
+		if(!flag) {
+			throw new UserAlreadyExists("duplicate username found");
+		}
+		else {
+			customerDAO.registerCustomer(customer);
+		}
+		return flag;
 	}
 
 	@Override
