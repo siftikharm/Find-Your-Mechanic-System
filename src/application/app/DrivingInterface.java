@@ -1,6 +1,8 @@
 package application.app;
 
 import java.io.IOException;
+import java.util.Scanner;
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +24,27 @@ public class DrivingInterface extends Application
 	}
 	
 	public static void main(String[] args) {
+		int db=0;
+		Scanner input = new Scanner(System.in);
+		do {
+	    	
+	    	System.out.println("1. MySQL DataBase\n");
+	    	System.out.println("2. File System\n");
+	    	System.out.println("0. Exit\n");
+	    	db = input.nextInt();
+	    	input.nextLine();
+//	    	System.out.println(inp);
+		} while (db<0||db>2);
+		DBSingleton singleton=DBSingleton.getInstance();
+		if (db==1) {
+			singleton.setS("mysql");
+		}
+		else if (db==2) {
+			singleton.setS("file");
+		}
+		else {
+			return;
+		}
 		launch(args);
 	}
 }

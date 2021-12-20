@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import application.app.DBSingleton;
 import application.doa.CustomerDOA;
 import application.doa.CustomerDOAImp;
+import application.doa.CustomerFileImp;
 import application.doa.WorkShopDOAImp;
 import application.doa.WorkshopDOA;
+import application.doa.WorkshopFileImp;
 import application.entity.Customer;
 import application.entity.Feedback;
 import application.entity.ServicesOffered;
@@ -20,7 +23,19 @@ import javafx.collections.ObservableList;
 
 
 public class WorkshopServiceImp implements WorkShopService {
-	private WorkshopDOA workshopDAO = new WorkShopDOAImp();
+	private WorkshopDOA workshopDAO;
+	
+	public WorkshopServiceImp() {
+		// TODO Auto-generated constructor stub
+		DBSingleton singleton=DBSingleton.getInstance();
+		if (singleton.getS().equals("mysql")) {
+			workshopDAO = new WorkShopDOAImp();
+		}
+		else {
+			workshopDAO = new WorkshopFileImp();
+		}
+	}
+	
 	@Override
 	public void addServices(ServicesOffered service,String workshopID) {
 		// TODO Auto-generated method stub
@@ -28,7 +43,7 @@ public class WorkshopServiceImp implements WorkShopService {
 		Workshop workshop=new Workshop();
 		for (int i = 0; i < workshops.size(); i++) {
 			if (workshops.get(i).getUsername().equals(workshopID)) {
-				workshop=workshops.get(i);	
+				workshop=workshops.get(i);	 
 			}
 		}
 		ObservableList<ServicesOffered> services=workshopDAO.getServices(workshop.getWorkShopID());
@@ -85,12 +100,6 @@ public class WorkshopServiceImp implements WorkShopService {
 		}
 		return null;
 	}
-
-
-
-
-
-
 
 
 

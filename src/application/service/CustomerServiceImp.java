@@ -1,23 +1,30 @@
 package application.service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 
+import application.app.DBSingleton;
+import application.doa.CustomerDOA;
+import application.doa.CustomerDOAImp;
+import application.doa.CustomerFileImp;
 import application.entity.Customer;
 import application.entity.Vehicle;
 import exceptionHandling.InvalidLoginCredentials;
 import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
-import application.doa.CustomerDOA;
-import application.doa.CustomerDOAImp;
 
 
 public class CustomerServiceImp implements CustomerService {
 	
-	private CustomerDOA customerDAO = new CustomerDOAImp();
+	private CustomerDOA customerDAO;
 	
 	public CustomerServiceImp() {
+		DBSingleton singleton=DBSingleton.getInstance();
+		if (singleton.getS().equals("mysql")) {
+			customerDAO = new CustomerDOAImp();
+		}
+		else {
+			customerDAO = new CustomerFileImp();
+		}
 		
 	}
 	

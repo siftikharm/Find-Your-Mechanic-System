@@ -25,7 +25,7 @@ import exceptionHandling.InvalidLoginCredentials;
 import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) 
 public class TestCustomerService {
 
 	private static SessionFactory sf;
