@@ -201,7 +201,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="BrakeService" layoutX="10.0" layoutY="226.0" mnemonicParsing="false" text="Brake Repair" textFill="WHITE">
+                              <CheckBox fx:id="BrakeService" layoutX="5.0" layoutY="226.0" mnemonicParsing="false" text="Brake Service" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -221,7 +221,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="ClutchRepair" layoutX="10.0" layoutY="248.0" mnemonicParsing="false" text="Clutch Plates" textFill="WHITE">
+                              <CheckBox fx:id="ClutchRepair" layoutX="10.0" layoutY="248.0" mnemonicParsing="false" text="Clutch Repair" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -231,7 +231,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="FilterService" layoutX="88.0" layoutY="186.0" mnemonicParsing="false" text="Air/Oil Filter Change" textFill="WHITE">
+                              <CheckBox fx:id="FilterService" layoutX="88.0" layoutY="186.0" mnemonicParsing="false" text="Oil/Air Filters" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -241,7 +241,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="ElectricService" layoutX="89.0" layoutY="206.0" mnemonicParsing="false" text="Electrical Repairing" textFill="WHITE">
+                              <CheckBox fx:id="ElectricService" layoutX="89.0" layoutY="206.0" mnemonicParsing="false" text="Electric Service" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -251,7 +251,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="ACService" layoutX="89.0" layoutY="227.0" mnemonicParsing="false" text="AC Service/Repair" textFill="WHITE">
+                              <CheckBox fx:id="ACService" layoutX="82.0" layoutY="227.0" mnemonicParsing="false" text="Air Conditioning Service" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -271,7 +271,7 @@
                                     <Font size="9.0" />
                                  </font>
                               </CheckBox>
-                              <CheckBox fx:id="PressurePlate" layoutX="90.0" layoutY="248.0" mnemonicParsing="false" text="Pressure Plates" textFill="WHITE">
+                              <CheckBox fx:id="PressurePlate" layoutX="90.0" layoutY="248.0" mnemonicParsing="false" text="Pressure Plate" textFill="WHITE">
                                  <font>
                                     <Font size="9.0" />
                                  </font>

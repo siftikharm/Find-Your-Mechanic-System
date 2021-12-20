@@ -14,8 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class Controller_VehicleUserSignUp
-{
+public class Controller_VehicleUserSignUp {
 	@FXML
 	private TextField Username;
 
@@ -24,38 +23,37 @@ public class Controller_VehicleUserSignUp
 
 	@FXML
 	private TextField EmailAddress;
-	
+
 	@FXML
 	private TextField PhoneNumber;
-		
+
 	@FXML
 	private TextField Gender;
-	
+
 	@FXML
 	private PasswordField Password;
 
 	@FXML
 	private PasswordField RetypedPassword;
-		
+
 	@FXML
 	private Button Back;
-	
+
 	@FXML
-	private Button SignUp;	
-	private CustomerService service=new CustomerServiceImp();
+	private Button SignUp;
+	private CustomerService service = new CustomerServiceImp();
+
 	@FXML
-	public void Back_Function(ActionEvent event) throws Exception
-	{
-		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
+	public void Back_Function(ActionEvent event) throws Exception {
+		BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
 		Scene scene = new Scene(root, 600, 400);
-		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
 
 	@FXML
-	public void SignUp_Function(ActionEvent event) throws Exception
-	{
+	public void SignUp_Function(ActionEvent event) throws Exception {
 		String username = Username.getText();
 		String name = FullName.getText();
 		String email = EmailAddress.getText();
@@ -63,19 +61,18 @@ public class Controller_VehicleUserSignUp
 		String gender = Gender.getText();
 		String password = Password.getText();
 		String retypedpassword = RetypedPassword.getText();
-		
-		if(password.equals(retypedpassword))
-		{	
-			Customer customer = new Customer(name,phone,gender,email,username,password);
+
+		if (password.equals(retypedpassword)) {
+			Customer customer = new Customer(name, phone, gender, email, username, password);
 			service.registerCustomer(customer);
-			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
+			BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
 			Scene scene = new Scene(root, 600, 400);
-			Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
+
 		}
-		
+
 	}
 
 }

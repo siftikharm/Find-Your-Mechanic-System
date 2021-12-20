@@ -25,7 +25,7 @@ import exceptionHandling.InvalidLoginCredentials;
 import exceptionHandling.UserAlreadyExists;
 import javafx.collections.ObservableList;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class) 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestCustomerService {
 
 	private static SessionFactory sf;
@@ -55,18 +55,14 @@ public class TestCustomerService {
 
 		}
 	}
+
 	@Test
 	void LoginTesting() {
-	    Throwable exception = assertThrows(InvalidLoginCredentials.class, () -> {
-	        customerService.customerLogin("qwerty", "rtyrty");
-	    });
-	    assertEquals("User name or password incorrect", exception.getMessage());
+		Throwable exception = assertThrows(InvalidLoginCredentials.class, () -> {
+			customerService.customerLogin("qwerty", "rtyrty");
+		});
+		assertEquals("User name or password incorrect", exception.getMessage());
 	}
-//	@Test
-//	@Order(2)
-//	public void testRegisterCustomerNegative() throws UserAlreadyExists {
-//		assertEquals(false , customerService.registerCustomer(customer) );
-//	}
 
 	@Test
 	@Order(2)

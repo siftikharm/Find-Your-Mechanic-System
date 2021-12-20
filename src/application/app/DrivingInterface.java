@@ -33,8 +33,8 @@ public class DrivingInterface extends Application
 	    	System.out.println("0. Exit\n");
 	    	db = input.nextInt();
 	    	input.nextLine();
-//	    	System.out.println(inp);
 		} while (db<0||db>2);
+		input.close();
 		DBSingleton singleton=DBSingleton.getInstance();
 		if (db==1) {
 			singleton.setS("mysql");

@@ -1,5 +1,6 @@
 package exceptionHandling;
 
+@SuppressWarnings("serial")
 public class IncorrectFeedback extends Exception {
 
 	public IncorrectFeedback() {

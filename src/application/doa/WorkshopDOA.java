@@ -3,7 +3,6 @@ package application.doa;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import application.entity.Customer;
 import application.entity.Feedback;
 import application.entity.ServicesOffered;
 import application.entity.Workshop;

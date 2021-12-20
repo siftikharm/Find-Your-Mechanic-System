@@ -1,8 +1,5 @@
 package application.service;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 import application.entity.Customer;
 import application.entity.Vehicle;
 import exceptionHandling.InvalidLoginCredentials;
@@ -16,5 +13,4 @@ public interface CustomerService {
 	public void addVehicle(Vehicle vehicle, String string);//done
 	public void removeVehicle(String customerID , String vehicle);//done
 	public Customer customerLogin(String customerID , String password) throws InvalidLoginCredentials;//done
-//	public  CustomerServiceImp getInstance();
 }

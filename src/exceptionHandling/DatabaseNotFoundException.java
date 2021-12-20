@@ -1,5 +1,6 @@
 package exceptionHandling;
 
+@SuppressWarnings("serial")
 public class DatabaseNotFoundException extends Exception {
 
 	public DatabaseNotFoundException() {

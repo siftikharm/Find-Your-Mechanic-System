@@ -49,10 +49,8 @@ public class WorkshopFileImp implements WorkshopDOA {
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(service);
             objectOut.close();
-//            System.out.println("The Object  was succesfully written to a file");
  
         } catch (Exception ex) {
-//            ex.printStackTrace();
         }
 	}
 
@@ -82,10 +80,8 @@ public class WorkshopFileImp implements WorkshopDOA {
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(feedback);
             objectOut.close();
-//            System.out.println("The Object  was succesfully written to a file");
  
         } catch (Exception ex) {
-//            ex.printStackTrace();
         }
 	}
 
@@ -95,6 +91,7 @@ public class WorkshopFileImp implements WorkshopDOA {
 		
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ArrayList<Workshop> getWorkshops() {
 		// TODO Auto-generated method stub
@@ -124,12 +121,11 @@ public class WorkshopFileImp implements WorkshopDOA {
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(object);
             objectOut.close();
-//            System.out.println("The Object  was succesfully written to a file");
  
         } catch (Exception ex) {
-//            ex.printStackTrace();
         }
 	}
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ObservableList<ServicesOffered> getServices(int workShopID) {
 		Session session = sf.openSession();
@@ -140,7 +136,6 @@ public class WorkshopFileImp implements WorkshopDOA {
 		trans.commit();
 		session.close();
 		ObservableList<ServicesOffered> services=FXCollections.observableArrayList();
-//		ArrayList<ServicesOffered> services=new ArrayList<>();
 		for (Iterator iterator = vehicles.iterator(); iterator.hasNext();) {
 			services.add((ServicesOffered) iterator.next());
 		}
@@ -157,6 +152,7 @@ public class WorkshopFileImp implements WorkshopDOA {
 		session.close();
 
 	}
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ArrayList<Feedback> getFeedbacks(int workShopID) {
 		// TODO Auto-generated method stub

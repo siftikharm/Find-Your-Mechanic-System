@@ -15,7 +15,6 @@ import application.entity.Feedback;
 import application.entity.ServicesOffered;
 import application.entity.Vehicle;
 import application.entity.Workshop;
-import exceptionHandling.DatabaseNotFoundException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -72,6 +71,7 @@ public class WorkShopDOAImp implements WorkshopDOA {
 		
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ArrayList<Workshop> getWorkshops() {
 		// TODO Auto-generated method stub
@@ -96,6 +96,7 @@ public class WorkShopDOAImp implements WorkshopDOA {
 		trans.commit();
 		session.close();
 	}
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ObservableList<ServicesOffered> getServices(int workShopID) {
 		Session session = sf.openSession();
@@ -106,7 +107,6 @@ public class WorkShopDOAImp implements WorkshopDOA {
 		trans.commit();
 		session.close();
 		ObservableList<ServicesOffered> services=FXCollections.observableArrayList();
-//		ArrayList<ServicesOffered> services=new ArrayList<>();
 		for (Iterator iterator = vehicles.iterator(); iterator.hasNext();) {
 			services.add((ServicesOffered) iterator.next());
 		}
@@ -123,6 +123,7 @@ public class WorkShopDOAImp implements WorkshopDOA {
 		session.close();
 
 	}
+	@SuppressWarnings("rawtypes")
 	@Override
 	public ArrayList<Feedback> getFeedbacks(int workShopID) {
 		// TODO Auto-generated method stub
